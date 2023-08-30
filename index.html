@@ -418,6 +418,7 @@
                   id="footer-email"
                   name="footer-email"
                   placeholder="E-mail"
+                  required
                 />
                 <button type="submit" class="default-button footer-button">
                   <span>Subscribe</span>
@@ -441,12 +442,17 @@
         <h2 class="modal-header">
           Leave your contacts and we will call you back
         </h2>
-        <form action="" method="post">
+        <form>
           <div class="modal-form">
             <div class="modal-form-item">
               <label for="client-name" class="modal-form-label">Name</label>
               <div class="input-wrapper">
-                <input type="text" id="client-name" name="client-name" />
+                <input
+                  type="text"
+                  id="client-name"
+                  name="client-name"
+                  required
+                />
                 <svg class="input-icon" width="18" height="18">
                   <use href="images/icons.svg#icon-person"></use>
                 </svg>
@@ -455,7 +461,14 @@
             <div class="modal-form-item">
               <label for="client-phone" class="modal-form-label">Phone</label>
               <div class="input-wrapper">
-                <input type="tel" id="client-phone" name="client-phone" />
+                <input
+                  type="text"
+                  pattern="[0-9]+"
+                  id="client-phone"
+                  name="client-phone"
+                  class="phone-number"
+                  required
+                />
                 <svg class="input-icon" width="18" height="18">
                   <use href="images/icons.svg#icon-phone"></use>
                 </svg>
@@ -464,7 +477,12 @@
             <div class="modal-form-item">
               <label for="client-email" class="modal-form-label">Email</label>
               <div class="input-wrapper">
-                <input type="email" id="client-email" name="client-email" />
+                <input
+                  type="email"
+                  id="client-email"
+                  name="client-email"
+                  required
+                />
                 <svg class="input-icon" width="18" height="18">
                   <use href="images/icons.svg#icon-email"></use>
                 </svg>
@@ -483,7 +501,7 @@
           <label for="consent" class="modal-form-label consent-label">
             <input
               type="checkbox"
-              class="consent-checkbox"
+              class="is-hidden consent-checkbox"
               id="consent"
               name="consent"
               value="1"
